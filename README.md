@@ -27,8 +27,6 @@ let page = Roff("corrupt", section: 1)
                 ])
 ```
 
-
-
 Which outputs:
 
 ```troff
@@ -49,8 +47,6 @@ modifies files by toggling a randomly chosen bit.
 Set the number of bits to modify.
 Default is one bit.
 ```
-
-
 
 Which will be shown by the `man(1)` command as:
 
