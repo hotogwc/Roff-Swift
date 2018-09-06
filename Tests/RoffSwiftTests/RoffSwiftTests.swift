@@ -27,8 +27,8 @@ final class RoffSwiftTests: XCTestCase {
     
     func testGenerating() {
         let page = Roff("corrupt", section: 1)
-            .appendSections("name", content: ["corrupt - modify files by randomly changing bits"])
-            .appendSections("SYNOPSIS", content: [
+            .appendSection("name", content: ["corrupt - modify files by randomly changing bits"])
+            .appendSection("SYNOPSIS", content: [
                 Printer.bold(input: "corrupt"),
                 " ",
                 "[", Printer.bold(input: "-n"), " ", Printer.italic(input: "BITS"), "]",
@@ -37,8 +37,8 @@ final class RoffSwiftTests: XCTestCase {
                 " ",
                 Printer.italic(input: "file"), "..."
                 ])
-            .appendSections("description", content: [Printer.bold(input: "corrupt"), " modifies files by toggling a randomly chosen bit."])
-            .appendSections("options", content: [
+            .appendSection("description", content: [Printer.bold(input: "corrupt"), " modifies files by toggling a randomly chosen bit."])
+            .appendSection("options", content: [
                 Printer.list(header: [Printer.bold(input: "-n"),
                                       ", ",
                                       Printer.bold(input: "--bits"),

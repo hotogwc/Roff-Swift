@@ -35,7 +35,7 @@ public class Roff {
         self.content = [Section]()
     }
     
-    func appendSections(_ title: String, content: [Renderable]) -> Roff {
+    func appendSection(_ title: String, content: [Renderable]) -> Roff {
         self.content.append(Section(title: title,
                                     content: content.map { $0.render() }
                                                     .joined(separator: "")))
